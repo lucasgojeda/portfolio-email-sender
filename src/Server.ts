@@ -6,7 +6,7 @@ import chalk from "chalk";
 import logger from "morgan";
 
 /** Routes */
-import { emailRouter } from "./routes";
+import { emailRouter, pingRouter } from "./routes";
 
 /** Interfaces */
 // import { type User } from './interfaces/user.interface'
@@ -19,6 +19,7 @@ export default class Server {
   private readonly port: string;
   private readonly apiPaths = {
     email: "/api/email",
+    ping: "/api/ping",
   };
 
   constructor() {
@@ -42,6 +43,7 @@ export default class Server {
 
   routes() {
     this.app.use(this.apiPaths.email, emailRouter);
+    this.app.use(this.apiPaths.ping, pingRouter);
   }
 
   listen() {

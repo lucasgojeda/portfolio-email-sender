@@ -20,6 +20,7 @@ class Server {
         var _a;
         this.apiPaths = {
             email: "/api/email",
+            ping: "/api/ping",
         };
         this.port = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : "8080";
         this.app = (0, express_1.default)();
@@ -35,6 +36,7 @@ class Server {
     }
     routes() {
         this.app.use(this.apiPaths.email, routes_1.emailRouter);
+        this.app.use(this.apiPaths.ping, routes_1.pingRouter);
     }
     listen() {
         this.app.listen(this.port, () => {
