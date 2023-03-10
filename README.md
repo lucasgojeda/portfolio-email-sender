@@ -1,24 +1,26 @@
-# travel agency ERP server
+# portfolio-email-sender
 
-This is a server made for a basic ERP.
+This is a server made for sending email by my clients from my portfolio to me.
 
 ## Installation
 
-Must have the mongoDb environment variable correctly configured on the .env file.
+Must have the environment variables correctly configured on the .env file.
 
 ```sh
 PORT=8080
-DB_URL=DatabaseUrl
-JWT_SECRET=secreto.01
-BCRYPT_SALT_OR_ROUNDS=11
+
+MAIL=
+
+clientId=
+secretId=
+refreshToken=
 ```
 
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-git clone https://github.com/Making-projects-and-learning/travel-agency-ERP-back.git
-cd travel-agency-ERP-back
+git clone https://github.com/lucasgojeda/portfolio-email-sender.git
+cd portfolio-email-sender
 npm i
 npm run dev
 ```
-"# portfolio-email-sender" 
